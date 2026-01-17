@@ -1,4 +1,4 @@
-````
+````md
 # 🥛 Dairy Billing Web Application
 
 A complete, responsive Dairy Billing System built using **HTML, CSS, and JavaScript**.  
@@ -53,6 +53,21 @@ This project works fully in the browser and uses **LocalStorage** to store billi
   - Card  
 - Mandatory before saving a bill.
 
+---
+
+### 5. Save Bill
+Each saved bill contains:
+```js
+{
+  date: "2026-01-17 10:45:30",
+  customerName: "Ravi",
+  customerMobile: "9876543210",
+  paymentMethod: "UPI",
+  items: [
+    { item: "Cow Milk", qty: "500ml", price: 31, count: 2, totalPrice: 62 }
+  ],
+  total: 62
+}
 ````
 
 * Stored in LocalStorage.
@@ -176,8 +191,3 @@ It shows:
 * Real POS system design
 
 ---
-
-## 👨‍💻 Author
-
-Built with dedication by **Bro**
-A complete end-to-end Dairy Billing Web Application.
