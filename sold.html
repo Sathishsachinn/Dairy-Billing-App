@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sold Products</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>Sold Products</h2>
+  <button onclick="location.href='index.html'">Back</button>
+</header>
+
+<div class="sales-report">
+  <p>Today Sale: <span id="todaySale">₹0</span></p>
+  <p>Week Sale: <span id="weekSale">₹0</span></p>
+  <p>Month Sale: <span id="monthSale">₹0</span></p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Mobile</th>
+      <th>Payment</th>
+      <th>Total</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody id="soldBody"></tbody>
+</table>
+
+<script src="sold.js"></script>
+</body>
+</html>

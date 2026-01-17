@@ -1,0 +1,198 @@
+````md
+# 🥛 Dairy Billing Web Application
+
+A complete, responsive Dairy Billing System built using **HTML, CSS, and JavaScript**.  
+This project works fully in the browser and uses **LocalStorage** to store billing data for up to 30 days. It is designed to simulate a real shop billing system with customer details, payment methods, sales reports, and a calculator.
+
+---
+
+## 🚀 Features
+
+### 1. Product Management
+- Products grouped by categories (shown vertically).
+- Click a category → shows products.
+- Click a product → shows quantity types and prices.
+- Click quantity → item added to bill.
+- Includes multiple categories:
+  - Milk  
+  - Curd  
+  - Ghee  
+  - Butter & Cheese  
+  - Milk Shakes  
+  - Dairy Sweets  
+  - Dairy Drinks  
+  - Yogurts, etc.
+
+---
+
+### 2. Billing System
+- Current bill table includes:
+  - Item Name  
+  - Quantity Type  
+  - Unit Price  
+  - Quantity (+ / – buttons)  
+  - Item Total  
+  - Remove Button  
+- Automatically calculates:
+  - Line total
+  - Grand total
+
+---
+
+### 3. Customer Details
+- Input fields:
+  - Customer Name  
+  - Mobile Number  
+
+---
+
+### 4. Payment Method
+- Choose one:
+  - Cash  
+  - UPI  
+  - Card  
+- Mandatory before saving a bill.
+
+---
+
+### 5. Save Bill
+Each saved bill contains:
+```js
+{
+  date: "2026-01-17 10:45:30",
+  customerName: "Ravi",
+  customerMobile: "9876543210",
+  paymentMethod: "UPI",
+  items: [
+    { item: "Cow Milk", qty: "500ml", price: 31, count: 2, totalPrice: 62 }
+  ],
+  total: 62
+}
+````
+
+* Stored in LocalStorage.
+* Automatically clears current bill after saving.
+* Bills older than **30 days** are removed automatically.
+
+---
+
+### 6. Sold Products Page (sold.html)
+
+* Shows:
+
+  * All saved bills
+  * Date & Time
+  * Customer Name
+  * Mobile Number
+  * Payment Method
+  * Total Amount
+* Expandable view:
+
+  * Shows full product details per bill:
+
+    * Item name
+    * Quantity type
+    * Unit price
+    * Count
+    * Total price
+
+---
+
+### 7. Sales Reports (in Sold Products Page)
+
+* Today Sale
+* This Week Sale
+* This Month Sale
+* Automatically calculated from saved bills.
+
+---
+
+### 8. Calculator Page (calculator.html)
+
+* POS-style calculator:
+
+  * +, −, ×, ÷, =
+  * Percentage (%) support
+* Used to calculate:
+
+  * Cash given
+  * Balance amount
+* Fully responsive with large buttons.
+
+---
+
+### 9. Responsive Design
+
+Works perfectly on:
+
+* 📱 Mobile
+* 📱 Tablet
+* 💻 Laptop
+
+---
+
+## 📂 Project Structure
+
+```
+dairy-billing-app/
+│
+├── index.html        → Main billing page  
+├── sold.html         → Sold products + sales report  
+├── calculator.html   → Calculator page  
+├── style.css         → All UI styling  
+├── script.js         → Main billing logic  
+├── sold.js           → Sold products logic  
+└── README.md         → Project documentation  
+```
+
+---
+
+## ⚙️ How to Run
+
+1. Download or clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/dairy-billing-app.git
+   ```
+
+2. Open `index.html` in your browser.
+
+3. Start billing immediately.
+
+No server. No database. Everything runs locally in your browser.
+
+---
+
+## 💡 Future Enhancements (Optional)
+
+* Export bills to PDF.
+* Admin login.
+* Cloud database (Firebase / MongoDB).
+* GST calculation.
+* Barcode scanner support.
+* Print bill feature.
+
+---
+
+## 🎯 Project Purpose
+
+This project is perfect for:
+
+* College Mini Project
+* Final Year Project
+* Portfolio Project
+* Real-world shop billing demo
+
+It shows:
+
+* Strong JavaScript logic
+* UI/UX thinking
+* Data management
+* Real POS system design
+
+---
+
+## 👨‍💻 Author
+
+Built with dedication by **Bro**
+A complete end-to-end Dairy Billing Web Application.

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dairy Billing App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>Dairy Billing App</h2>
+  <div class="nav-buttons">
+    <button onclick="location.href='sold.html'">Sold Products</button>
+    <button onclick="location.href='calculator.html'">Calculator</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- Customer Details -->
+  <div class="customer">
+    <input type="text" id="customerName" placeholder="Customer Name">
+    <input type="text" id="customerMobile" placeholder="Mobile Number">
+  </div>
+
+  <!-- Payment -->
+  <div class="payment-section">
+    <button class="payment">Cash</button>
+    <button class="payment">UPI</button>
+    <button class="payment">Card</button>
+  </div>
+
+  <div class="main">
+
+    <!-- Categories -->
+    <div class="category-section" id="categorySection"></div>
+
+    <!-- Billing -->
+    <div class="billing-section">
+      <h3>Current Bill</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Price</th>
+            <th>Count</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="billTable"></tbody>
+      </table>
+      <h3>Total: ₹<span id="total">0</span></h3>
+      <button id="saveBill">Save Bill</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

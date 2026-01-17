@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f2f6ff;
+}
+
+header {
+  background: #4f7cff;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background: #4f7cff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #355fd6;
+}
+
+.container {
+  padding: 10px;
+}
+
+.customer input {
+  padding: 8px;
+  margin: 5px;
+  width: 150px;
+}
+
+.payment-section button {
+  margin: 5px;
+}
+
+.payment.active {
+  background: green;
+}
+
+.main {
+  display: flex;
+  gap: 10px;
+}
+
+.category-section {
+  width: 30%;
+}
+
+.category {
+  background: #e3ecff;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.category h4 {
+  cursor: pointer;
+}
+
+.product {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.quantity {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.billing-section {
+  width: 70%;
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+}
+
+.sales-report {
+  padding: 10px;
+  background: white;
+  margin: 10px;
+}
+
+.calculator {
+  width: 250px;
+  margin: 20px auto;
+}
+
+.calculator input {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.keys button {
+  width: 22%;
+  margin: 2px;
+  height: 40px;
+}
+
+@media (max-width:768px){
+  .main {
+    flex-direction: column;
+  }
+  .category-section,
+  .billing-section {
+    width: 100%;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+  header {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .display {
+    height: 65px;
+    font-size: 26px;
+  }
+
+  .buttons button {
+    height: 60px;
+    font-size: 18px;
+  }
+}
+
+/* 📱 Tablet */
+@media (min-width: 481px) and (max-width: 900px) {
+  .calculator {
+    width: 85%;
+  }
+
+  .display {
+    height: 75px;
+    font-size: 30px;
+  }
+
+  .buttons button {
+    height: 65px;
+    font-size: 20px;
+  }
+}

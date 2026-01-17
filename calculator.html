@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+<style>
+  body {
+    margin: 0;
+    background: #f2f7ff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    width: 100%;
+    background: #4f7cff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .back-btn {
+    margin: 10px;
+    background: #4f7cff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .calculator {
+    width: 360px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+
+  .display {
+    width: 100%;
+    height: 70px;
+    font-size: 28px;
+    text-align: right;
+    padding: 10px;
+    border: 2px solid #4f7cff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .buttons button {
+    height: 65px;
+    font-size: 22px;
+    border: none;
+    border-radius: 6px;
+    background: #4f7cff;
+    color: white;
+    cursor: pointer;
+  }
+
+  .buttons button.operator {
+    background: #ff9f43;
+  }
+
+  .buttons button.equal {
+    background: #20bf6b;
+    grid-column: span 2;
+  }
+
+  .buttons button.clear {
+    background: #eb3b5a;
+  }
+
+ /* 📱 Mobile */
+@media (max-width: 480px) {
+  header {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .display {
+    height: 65px;
+    font-size: 26px;
+  }
+
+  .buttons button {
+    height: 60px;
+    font-size: 18px;
+  }
+}
+
+/* 📱 Tablet */
+@media (min-width: 481px) and (max-width: 900px) {
+  .calculator {
+    width: 85%;
+  }
+
+  .display {
+    height: 75px;
+    font-size: 30px;
+  }
+
+  .buttons button {
+    height: 65px;
+    font-size: 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>Calculator</header>
+
+<button class="back-btn" onclick="location.href='index.html'">⬅ Back to Billing</button>
+
+<div class="calculator">
+  <input type="text" id="display" class="display" readonly>
+
+  <div class="buttons">
+    <button class="clear" onclick="clearDisplay()">C</button>
+    <button onclick="appendValue('%')">%</button>
+    <button onclick="appendValue('/')">÷</button>
+    <button onclick="appendValue('*')">×</button>
+
+    <button onclick="appendValue('7')">7</button>
+    <button onclick="appendValue('8')">8</button>
+    <button onclick="appendValue('9')">9</button>
+    <button onclick="appendValue('-')">−</button>
+
+    <button onclick="appendValue('4')">4</button>
+    <button onclick="appendValue('5')">5</button>
+    <button onclick="appendValue('6')">6</button>
+    <button onclick="appendValue('+')">+</button>
+
+    <button onclick="appendValue('1')">1</button>
+    <button onclick="appendValue('2')">2</button>
+    <button onclick="appendValue('3')">3</button>
+    <button onclick="appendValue('.')">.</button>
+
+    <button onclick="calculate()" class="equal">=</button>
+    <button onclick="appendValue('0')" style="grid-column: span 2;">0</button>
+    
+  </div>
+</div>
+
+<script>
+  const display = document.getElementById("display");
+
+  function appendValue(value) {
+    display.value += value;
+  }
+
+  function clearDisplay() {
+    display.value = "";
+  }
+
+  function calculate() {
+    try {
+      let expression = display.value;
+
+      // Handle percentage: 50% → 0.5
+      expression = expression.replace(/(\d+)%/g, "($1/100)");
+
+      const result = eval(expression);
+      display.value = result;
+    } catch {
+      display.value = "Error";
+    }
+  }
+</script>
+
+</body>
+</html>
