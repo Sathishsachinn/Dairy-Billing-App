@@ -1,0 +1,9 @@
+# Exclude saved bills (personal data)
+bills/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/

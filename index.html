@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dairy Billing App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+  <!-- Header -->
+  <header>
+    <h2>🥛 Dairy Billing App</h2>
+    <input type="text" id="searchBar" placeholder="🔍 Search product...">
+  </header>
+
+  <!-- Bills Folder Bar -->
+  <div class="folder-bar" id="folderBar">
+    <span id="folderStatus">📁 No bills folder selected — click to set up</span>
+    <button id="selectFolderBtn">📂 Select Bills Folder</button>
+  </div>
+
+  <!-- Main Layout -->
+  <div class="main">
+
+    <!-- Categories -->
+    <div class="category-section" id="categorySection"></div>
+
+    <!-- Bill Area -->
+    <div class="billing-section">
+      <h3>🧾 Current Bill</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Qty</th>
+              <th>Price</th>
+              <th>Count</th>
+              <th>Total</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody id="billTable"></tbody>
+        </table>
+      </div>
+
+      <div class="total-display">
+        <span>Bill Total</span>
+        <span>₹<span id="total">0</span></span>
+      </div>
+
+      <button id="saveBill">💾 Save Bill</button>
+    </div>
+
+    <!-- Sold Products -->
+    <div class="sold-section">
+      <h3>📊 Today's Bills</h3>
+      <ul id="soldList"></ul>
+      <div class="total-sales-box">
+        <span>Total Sales</span>
+        <span>₹<span id="totalSales">0</span></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
